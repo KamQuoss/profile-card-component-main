@@ -1,35 +1,31 @@
 
 $mobile-width: 375px;
 $desktop-width: 1440px;
-$border-radius: 10px;
+$border-radius: 18px;
 
 // --- COLORS ---
 
 // Primary
 
-$dark-cyan: hsl(185, 75%, 39%);
-$very-dark-desaturated-blue: hsl(229, 23%, 23%);
-$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-cyan: #19a2ae;
+$very-dark-desaturated-blue: #2d3248;
+$dark-grayish-blue: #6a6f81;
 
 // Neutral
 
 $white: #fff;
-$dark-gray: hsl(0, 0%, 59%);
+$dark-gray: #969696;
+$light-gray: #D8D8D8;
 
 // TYPOGRAPHY
 
 $font-size: 18px;
+$secondary-header-size: 20px;
+$counter-number-size: 20px;
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 // MIXINS
-
-@mixin centered-block() {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 @mixin flex-center-one-element {
     display: flex;
@@ -43,26 +39,31 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     background-color: $dark-cyan;
     margin: 0; // this part taken from normalize.css
-    // background: 
-    // url(/images/bg-pattern-top.svg) no-repeat right top,
-    // url(/images/bg-pattern-bottom.svg) no-repeat left bottom $dark-cyan;
-
 }
+
+h3+p {
+    margin-top: 0;
+}
+h3 {
+    margin-bottom: 0.7rem
+}
+
 .content {
     @include flex-center-one-element;
     width: 100vw;
     height: 100vh;
-
-    // &::before{
-    //     content: "";
-    //     position: absolute;
-    //     width: 500px;
-    //     height: 500px;
-    //     top: -50%;
-    //     left: -50%;
-    //     background: url(/images/bg-pattern-top.svg) no-repeat;
-    //     background-size: 500px 500px;
-    // }
+    &::before{
+        content: url(/images/bg-pattern-top.svg);
+        position: fixed;
+        right: 50%;
+        bottom: 50%;
+    }
+    &::after{
+        content: url(/images/bg-pattern-bottom.svg);
+        position: fixed;
+        left: 50%;
+        top: 50%;
+    }
 }
 
 .card {
@@ -70,7 +71,58 @@ body {
     border-radius: $border-radius;
     width: 350px;
     height: 376px;
-    
+    z-index: 1;
+    color: $very-dark-desaturated-blue;
+    .card__aside{
+        background: url(/images/bg-pattern-card.svg);
+        background-size: contain;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        height: 35%;        
+    }
+    .card__body{
+        height: 40%;        
+        position: relative;
+        bottom: 50px;
+       .card__figure{
+           display: flex;
+           justify-content: center;
+            img {
+                border-radius: 50%;
+                border: 6px solid $white;
+            }
+        }
+        .card__bio{
+            text-align: center;
+            .card__name{
+                &--age{
+                    color: $dark-grayish-blue;
+                    font-weight: 400;
+                }
+            }
+            .card__city{
+                color: $dark-grayish-blue;
+            }
+        } 
+    }
+    .card__footer{
+        border-top: 1px solid $light-gray;
+        .footer__list{
+            display: flex;
+            padding: 1rem;
+            .footer__item{
+                width: 33%;
+                text-align: center;
+                .item__counter{
+                    font-size: $counter-number-size;
+                    font-weight: 700;
+                }
+                .item__caption{
+                    color: $dark-grayish-blue;
+                }
+            }
+        }
+    }    
 }
 
 .attribution { font-size: 11px; text-align: center; position: fixed; }

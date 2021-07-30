@@ -6,6 +6,14 @@ body {
   margin: 0;
 }
 
+h3 + p {
+  margin-top: 0;
+}
+
+h3 {
+  margin-bottom: 0.7rem;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,11 +28,93 @@ body {
   height: 100vh;
 }
 
+.content::before {
+  content: url(/images/bg-pattern-top.svg);
+  position: fixed;
+  right: 50%;
+  bottom: 50%;
+}
+
+.content::after {
+  content: url(/images/bg-pattern-bottom.svg);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+}
+
 .card {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 18px;
   width: 350px;
   height: 376px;
+  z-index: 1;
+  color: #2d3248;
+}
+
+.card .card__aside {
+  background: url(/images/bg-pattern-card.svg);
+  background-size: contain;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  height: 35%;
+}
+
+.card .card__body {
+  height: 40%;
+  position: relative;
+  bottom: 50px;
+}
+
+.card .card__body .card__figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card .card__body .card__figure img {
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+
+.card .card__body .card__bio {
+  text-align: center;
+}
+
+.card .card__body .card__bio .card__name--age {
+  color: #6a6f81;
+  font-weight: 400;
+}
+
+.card .card__body .card__bio .card__city {
+  color: #6a6f81;
+}
+
+.card .card__footer {
+  border-top: 1px solid #D8D8D8;
+}
+
+.card .card__footer .footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+}
+
+.card .card__footer .footer__list .footer__item {
+  width: 33%;
+  text-align: center;
+}
+
+.card .card__footer .footer__list .footer__item .item__counter {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card .card__footer .footer__list .footer__item .item__caption {
+  color: #6a6f81;
 }
 
 .attribution {
