@@ -43,12 +43,18 @@ h3 {
 }
 
 .card {
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(45, 50, 72, 0.3);
+          box-shadow: 0px 0px 20px 2px rgba(45, 50, 72, 0.3);
   background-color: #fff;
   border-radius: 18px;
   width: 350px;
   height: 376px;
   z-index: 1;
   color: #2d3248;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .card .card__aside {
@@ -86,6 +92,7 @@ h3 {
 .card .card__body .card__bio .card__name--age {
   color: #6a6f81;
   font-weight: 400;
+  padding: 0 0.35ch;
 }
 
 .card .card__body .card__bio .card__city {
@@ -115,6 +122,13 @@ h3 {
 
 .card .card__footer .footer__list .footer__item .item__caption {
   color: #6a6f81;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .attribution {
