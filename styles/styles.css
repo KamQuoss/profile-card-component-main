@@ -29,7 +29,7 @@ h3 {
 }
 
 .content::before {
-  content: url(../../images/bg-pattern-top.svg);
+  content: url(/images/bg-pattern-top.svg);
   position: fixed;
   right: 50%;
   bottom: 50%;
