@@ -57,13 +57,13 @@ h3 {
     width: 100vw;
     height: 100vh;
     &::before{
-        content: url(/images/bg-pattern-top.svg);
+        content: url(/../images/bg-pattern-top.svg);
         position: fixed;
         right: 50%;
         bottom: 50%;
     }
     &::after{
-        content: url(../../images/bg-pattern-bottom.svg);
+        content: url(/../images/bg-pattern-bottom.svg);
         position: fixed;
         left: 50%;
         top: 50%;
@@ -81,7 +81,7 @@ h3 {
     transform: scale(1);
     transition: 0.5s all;
     .card__aside{
-        background: url(../../images/bg-pattern-card.svg);
+        background: url(/../images/bg-pattern-card.svg);
         background-size: contain;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
