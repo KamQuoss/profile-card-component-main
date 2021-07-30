@@ -1,6 +1,7 @@
 
 $mobile-width: 375px;
 $desktop-width: 1440px;
+$border-radius: 10px;
 
 // --- COLORS ---
 
@@ -12,6 +13,7 @@ $dark-grayish-blue: hsl(227, 10%, 46%);
 
 // Neutral
 
+$white: #fff;
 $dark-gray: hsl(0, 0%, 59%);
 
 // TYPOGRAPHY
@@ -20,10 +22,56 @@ $font-size: 18px;
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
+// MIXINS
+
+@mixin centered-block() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin flex-center-one-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 body {
     font-size: $font-size;
     font-family: 'Kumbh Sans', sans-serif;
+    background-color: $dark-cyan;
+    margin: 0; // this part taken from normalize.css
+    // background: 
+    // url(/images/bg-pattern-top.svg) no-repeat right top,
+    // url(/images/bg-pattern-bottom.svg) no-repeat left bottom $dark-cyan;
+
+}
+.content {
+    @include flex-center-one-element;
+    width: 100vw;
+    height: 100vh;
+
+    // &::before{
+    //     content: "";
+    //     position: absolute;
+    //     width: 500px;
+    //     height: 500px;
+    //     top: -50%;
+    //     left: -50%;
+    //     background: url(/images/bg-pattern-top.svg) no-repeat;
+    //     background-size: 500px 500px;
+    // }
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.card {
+    background-color: $white;
+    border-radius: $border-radius;
+    width: 350px;
+    height: 376px;
+    
+}
+
+.attribution { font-size: 11px; text-align: center; position: fixed; }
 .attribution a { color: hsl(228, 45%, 44%); }

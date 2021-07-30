@@ -82,7 +82,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [BEM cheat sheet](https://9elements.com/bem-cheat-sheet/#card+i) - This helped with identifying and naming elements in html.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [normalize.css](https://github.com/necolas/normalize.css) - This is stylesheet that normalizes styles ond preserves useful defaults. I've used only some rules which I found useful for this project. This repo could be out of date, last commits was made at Nov 2018.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
