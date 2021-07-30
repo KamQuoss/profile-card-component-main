@@ -2,8 +2,6 @@
 
 This is a solution to the [Profile card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-# WORK IN PROGRESS :construction_worker:
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -23,16 +21,15 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 - Build out the project to the designs provided
 
-### Screenshot :construction_worker:
+### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
-### Links :construction_worker:
+### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [here](https://kamquoss.github.io/profile-card-component-main/)
 
-## My process :construction_worker:
+## My process
 
 ### Built with
 
@@ -43,7 +40,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ### What I learned
 
 - naming conventions in Sass (finally I've chosen kebab-case-convention for it's readability. :bulb: Fun fact: Sass treat hyphens and underscores as identical) 
-- HTML has other tags than <div> :innocent:
+- HTML has other tags than div :innocent:
 - CSS background is limited, alternative I found ::before and ::after useful with fixed positioning
 ```css
     &::before{
@@ -74,6 +71,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - [normalize.css](https://github.com/necolas/normalize.css) - This is stylesheet that normalizes styles ond preserves useful defaults. I've used only some rules which I found useful for this project. This repo could be out of date, last commits was made at Nov 2018.
 - [htmlcolorcodes](https://htmlcolorcodes.com/color-picker/) - Good looking, useful color picker with color schemes. 
 - [CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) - Comprehensive article on CSS values and units, also relations between them included.
+- [PX to REM converter](https://nekocalc.com/px-to-rem-converter) - This calculator might be useful in case you don't wont to use pixels but rem instead.
 
 ## Author
 
