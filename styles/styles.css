@@ -58,7 +58,7 @@ h3 {
 }
 
 .card .card__aside {
-  background: url(../../images/bg-pattern-top.svg);
+  background: url(../../images/bg-pattern-card.svg);
   background-size: contain;
   border-top-left-radius: 1.125rem;
   border-top-right-radius: 1.125rem;

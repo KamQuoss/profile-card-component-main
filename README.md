@@ -44,13 +44,13 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - CSS background is limited, alternative I found ::before and ::after useful with fixed positioning
 ```css
     &::before{
-        content: url(/images/bg-pattern-top.svg);
+        content: url(../../images/bg-pattern-top.svg);
         position: fixed;
         right: 50%;
         bottom: 50%;
     }
     &::after{
-        content: url(/images/bg-pattern-bottom.svg);
+        content: url(../../images/bg-pattern-bottom.svg);
         position: fixed;
         left: 50%;
         top: 50%;
